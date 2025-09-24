@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank You — ALL IN ONE HOLDINGS</title>
+  <style>
+    @page { size: A5 landscape; margin: 0; }
+    body { margin: 0; font-family: "Segoe UI", Roboto, "Fira Code", Consolas, monospace; }
+
+    .editor {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(180deg,#0b1220 0%, #071020 100%);
+      color: #c8d6e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 16px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 10px;
+      background: #0f1724;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.7), inset 0 1px 0 rgba(255,255,255,0.02);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 600px;
+    }
+
+    .sidebar {
+      background: #0b1220;
+      padding: 18px 14px;
+      border-right: 1px solid rgba(255,255,255,0.03);
+    }
+    .logo {
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .logo img {
+      width: 160px;
+      max-width: 100%;
+      height: auto;
+    }
+    .file {
+      background: rgba(255,255,255,0.02);
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin: 8px 0;
+      font-size: clamp(11px, 2vw, 13px);
+      color: #cbd5e1;
+      word-break: break-word;
+    }
+
+    .main {
+      padding: 22px 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      color: #c9d6e9;
+      position: relative;
+    }
+
+    .tabs {
+      display:flex;
+      flex-wrap: wrap;
+      gap:10px;
+      align-items:center;
+      margin-bottom: 16px;
+    }
+    .tab {
+      background: rgba(255,255,255,0.02);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: clamp(11px, 2vw, 13px);
+      color: #9fb4d8;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+    }
+
+    pre.code {
+      background: transparent;
+      padding: 14px;
+      border-radius: 8px;
+      font-family: "Fira Code", "Source Code Pro", monospace;
+      font-size: clamp(12px, 2vw, 15px);
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+      overflow-x: auto;
+    }
+
+    .tok-key { color: #7dd3fc; }
+    .tok-fn  { color: #fca5a5; }
+    .tok-str { color: #fde68a; }
+    .tok-att { color: #86efac; }
+    .tok-cmt { color: #6b7280; font-style: italic; }
+
+    .note {
+      position: absolute;
+      right: 16px;
+      bottom: 14px;
+      font-size: clamp(10px, 2vw, 12px);
+      color: #94a3b8;
+      max-width: 90%;
+      text-align: right;
+    }
+
+    @media print {
+      body { background: white; }
+      .editor { box-shadow: none; }
+      .card { box-shadow: none; border-radius: 0; }
+    }
+
+    @media (max-width: 900px){
+      .card { grid-template-columns: 1fr; min-height: auto; }
+      .sidebar { display:none; }
+      .main { padding: 16px; }
+    }
+
+    @media (max-width: 600px){
+      .editor { padding: 8px; }
+      .tabs { gap: 6px; }
+      .tab { padding: 4px 8px; }
+      .note { font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="editor">
+    <div class="card" role="article" aria-label="Thank you card">
+      <aside class="sidebar" aria-hidden="true">
+        <div class="logo">
+          <img src="aioh-new-logo-white.png" alt="ALL IN ONE HOLDINGS logo" />
+        </div>
+        <div class="file">/visits/2025-09-22/thank-you.md</div>
+        <div class="file">/notes/inspiration.txt</div>
+        <div class="file">/photos/team.jpg</div>
+        <div style="height:18px"></div>
+        <div style="font-size:12px;color:#7b8794;">Field visit | Gratitude</div>
+      </aside>
+
+      <main class="main">
+        <div class="tabs">
+          <div class="tab">thank-you.md</div>
+          <div class="tab">README.md</div>
+          <div style="flex:1"></div>
+        </div>
+
+        <pre class="code" aria-hidden="false"><span class="tok-cmt">// Thank you note</span>
+
+<span class="tok-key">const</span> <span class="tok-att">company</span> = <span class="tok-str">"ALL IN ONE HOLDINGS"</span>;
+<span class="tok-key">const</span> <span class="tok-att">date</span> = <span class="tok-str">"September 19, 2025"</span>;
+
+<span class="tok-cmt">/*</span>
+<span class="tok-cmt">  Dear CEO and Team of ALL IN ONE HOLDINGS,</span>
+<span class="tok-cmt">*/</span>
+
+<span class="tok-key">function</span> <span class="tok-fn">sendThanks</span>() {
+  <span class="tok-key">return</span> 
+  To the CEO and all the staff of ${company},
+
+  Thank you for warmly welcoming us during our field visit on ${date}. Your team treated us exceptionally well and shared valuable time,
+  insights, and inspiration. We deeply appreciate your willingness to sacrifice your valuable time to guide us — the knowledge and
+  experience you shared will influence our studies and future projects.
+
+  With sincere gratitude,
+  Team Members.
+  ;
+}
+
+<span class="tok-cmt">// Execute the function (in spirit!)</span>
+<span class="tok-key">console</span>.log(<span class="tok-fn">sendThanks</span>());
+        </pre>
+
+        <div class="note">Thank you, ALL IN ONE HOLDINGS — for inspiration, warm hospitality, and time.</div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
